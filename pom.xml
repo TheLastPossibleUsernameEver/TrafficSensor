@@ -11,7 +11,7 @@
     <build>
             <plugins>
 
-            <!-- Specify to the compiler we want Java 1.8 -->
+            <!-- Specify to the compiler we want Java 11 -->
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
