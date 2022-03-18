@@ -10,12 +10,12 @@ import java.util.Objects;
 import java.util.concurrent.TimeoutException;
 
 /**
- * Custom Receiver that receives the data from all network interfaces
+ * Custom Receiver that receives data from all network interfaces
  */
 
 public class PacketReceiver extends Receiver<Packet> {
 
-    public PacketReceiver(){
+    public PacketReceiver() {
         super(StorageLevel.MEMORY_AND_DISK_2());
     }
 
@@ -49,9 +49,9 @@ public class PacketReceiver extends Receiver<Packet> {
 
         PcapHandle packetHandler = openPacketHandlerOn(interfaceAny);
 
-            while(Objects.requireNonNull(packetHandler).getNextPacketEx()!=null){
-                    store(packetHandler.getNextPacketEx());
-            }
+        while (Objects.requireNonNull(packetHandler).getNextPacketEx() != null) {
+            store(packetHandler.getNextPacketEx());
+        }
 
     }
 }
